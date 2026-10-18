@@ -156,7 +156,7 @@ def constraint_optimization_against_two_values(
             po.Expression(
                 expr=sum((
                     getattr(comp_fix[num], "fix_constraint_costs")
-                    * om.GenericInvestmentStorageBlock.invest_status[num])
+                    * om.GenericInvestmentStorageBlock.invest_status[(num, 0)])
                     for num in comp_fix)
             ),
         )
